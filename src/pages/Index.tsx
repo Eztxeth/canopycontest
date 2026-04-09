@@ -22,9 +22,7 @@ export default function Index() {
       <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-md bg-primary/20 flex items-center justify-center">
-              <Radio className="h-4 w-4 text-primary" />
-            </div>
+            <img src={logo} alt="NodeWatch" className="h-8 w-8 rounded-md object-cover" />
             <div>
               <h1 className="text-lg font-bold text-foreground text-glow">NodeWatch</h1>
               <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Web3 Node Monitor</p>
