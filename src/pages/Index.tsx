@@ -5,15 +5,7 @@ import { NetworkStats } from "@/components/NetworkStats";
 import logo from "@/assets/logo.png";
 import { RecentBlocks } from "@/components/RecentBlocks";
 import { SyncChart } from "@/components/SyncChart";
-
-const nodes = [
-  { name: "ETH Mainnet #1", chain: "Ethereum • Geth v1.13.14", status: "online" as const, blockHeight: 19284751, peers: 47, uptime: "99.97%", latency: 42 },
-  { name: "ETH Mainnet #2", chain: "Ethereum • Erigon v2.59", status: "syncing" as const, blockHeight: 19284200, peers: 31, uptime: "98.12%", latency: 156 },
-  { name: "Polygon Node", chain: "Polygon • Bor v1.2.7", status: "online" as const, blockHeight: 54892103, peers: 52, uptime: "99.85%", latency: 38 },
-  { name: "Arbitrum Node", chain: "Arbitrum • Nitro v3.0.1", status: "warning" as const, blockHeight: 187294012, peers: 18, uptime: "97.34%", latency: 245 },
-  { name: "BSC Validator", chain: "BNB Chain • Geth v1.3.10", status: "online" as const, blockHeight: 37128456, peers: 39, uptime: "99.91%", latency: 55 },
-  { name: "Optimism Node", chain: "Optimism • Op-Geth v1.101", status: "offline" as const, blockHeight: 118234567, peers: 0, uptime: "0%", latency: 0 },
-];
+import { nodes } from "@/data/nodes";
 
 export default function Index() {
   return (
@@ -48,7 +40,7 @@ export default function Index() {
           <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Nodes</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {nodes.map((node) => (
-              <NodeCard key={node.name} {...node} />
+              <NodeCard key={node.id} {...node} />
             ))}
           </div>
         </section>
