@@ -14,10 +14,10 @@ export default function Index() {
       <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="NodeWatch" className="h-8 w-8 rounded-md object-cover" />
+            <img src={logo} alt="Canopy Network" className="h-8 w-8 object-contain" />
             <div>
-              <h1 className="text-lg font-bold text-foreground text-glow">NodeWatch</h1>
-              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Web3 Node Monitor</p>
+              <h1 className="text-lg font-bold text-foreground text-glow">Canopy</h1>
+              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Node Monitor</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
