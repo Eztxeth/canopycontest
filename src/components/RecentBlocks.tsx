@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { Box } from "lucide-react";
 
 const blocks = [
-  { number: 19284751, txCount: 182, gasUsed: "14.2M", time: "2s ago", validator: "0x1a2b...9f3e" },
-  { number: 19284750, txCount: 156, gasUsed: "12.8M", time: "14s ago", validator: "0x4c5d...2a1b" },
-  { number: 19284749, txCount: 201, gasUsed: "15.1M", time: "26s ago", validator: "0x7e8f...5c4d" },
-  { number: 19284748, txCount: 143, gasUsed: "11.9M", time: "38s ago", validator: "0x2b3c...8e7f" },
-  { number: 19284747, txCount: 178, gasUsed: "13.5M", time: "50s ago", validator: "0x6d7e...1a2b" },
-  { number: 19284746, txCount: 165, gasUsed: "12.4M", time: "1m ago", validator: "0x9f0a...4c5d" },
+  { number: 1284751, txCount: 182, gasUsed: "14.2M", time: "2s ago", validator: "cnpy1a2b...9f3e" },
+  { number: 1284750, txCount: 156, gasUsed: "12.8M", time: "14s ago", validator: "cnpy4c5d...2a1b" },
+  { number: 1284749, txCount: 201, gasUsed: "15.1M", time: "26s ago", validator: "cnpy7e8f...5c4d" },
+  { number: 1284748, txCount: 143, gasUsed: "11.9M", time: "38s ago", validator: "cnpy2b3c...8e7f" },
+  { number: 1284747, txCount: 178, gasUsed: "13.5M", time: "50s ago", validator: "cnpy6d7e...1a2b" },
+  { number: 1284746, txCount: 165, gasUsed: "12.4M", time: "1m ago", validator: "cnpy9f0a...4c5d" },
 ];
 
 export function RecentBlocks() {
