@@ -23,7 +23,7 @@ export default function Index() {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-success/10 border border-success/20">
               <Activity className="h-3 w-3 text-success" />
-              <span className="text-xs font-mono text-success">4/6 Nodes Active</span>
+              <span className="text-xs font-mono text-success">4/6 Nodes Online</span>
             </div>
           </div>
         </div>
