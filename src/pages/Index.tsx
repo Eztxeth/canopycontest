@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Activity } from "lucide-react";
 import { NodeCard } from "@/components/NodeCard";
 import { NetworkStats } from "@/components/NetworkStats";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/canopy-logo.png";
 import { RecentBlocks } from "@/components/RecentBlocks";
 import { SyncChart } from "@/components/SyncChart";
 import { nodes } from "@/data/nodes";
