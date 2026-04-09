@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Activity, Radio } from "lucide-react";
+import { Activity } from "lucide-react";
 import { NodeCard } from "@/components/NodeCard";
 import { NetworkStats } from "@/components/NetworkStats";
+import logo from "@/assets/logo.png";
 import { RecentBlocks } from "@/components/RecentBlocks";
 import { SyncChart } from "@/components/SyncChart";
 
