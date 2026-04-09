@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { StatusIndicator } from "./StatusIndicator";
 import { Activity, Box, Users, Clock } from "lucide-react";
 
 interface NodeCardProps {
+  id: string;
   name: string;
   chain: string;
   status: "online" | "syncing" | "offline" | "warning";
@@ -12,13 +14,14 @@ interface NodeCardProps {
   latency: number;
 }
 
-export function NodeCard({ name, chain, status, blockHeight, peers, uptime, latency }: NodeCardProps) {
+export function NodeCard({ id, name, chain, status, blockHeight, peers, uptime, latency }: NodeCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="rounded-lg border border-border bg-card p-5 hover:border-primary/40 transition-colors glow-primary/0 hover:glow-primary"
-    >
+    <Link to={`/node/${id}`}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="rounded-lg border border-border bg-card p-5 hover:border-primary/40 transition-colors cursor-pointer hover:glow-primary"
+      >
       <div className="flex items-start justify-between mb-4">
         <div>
           <h3 className="font-semibold text-card-foreground">{name}</h3>
@@ -33,8 +36,8 @@ export function NodeCard({ name, chain, status, blockHeight, peers, uptime, late
         <Stat icon={Clock} label="Uptime" value={uptime} />
         <Stat icon={Activity} label="Latency" value={`${latency}ms`} highlight={latency > 200} />
       </div>
-    </motion.div>
-  );
+      </motion.div>
+    </Link>
 }
 
 function Stat({ icon: Icon, label, value, highlight }: { icon: any; label: string; value: string; highlight?: boolean }) {
