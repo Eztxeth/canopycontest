@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Canopy Contest
 
-TODO: Document your project here
+TODO: Eztxeth
