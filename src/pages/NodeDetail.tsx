@@ -49,8 +49,8 @@ const levelIcon = {
 };
 
 const chartTooltipStyle = {
-  backgroundColor: "hsl(220, 18%, 10%)",
-  border: "1px solid hsl(220, 15%, 18%)",
+  backgroundColor: "hsl(232, 12%, 16%)",
+  border: "1px solid hsl(232, 10%, 24%)",
   borderRadius: "8px",
   fontSize: 11,
   fontFamily: "JetBrains Mono",
@@ -154,15 +154,15 @@ export default function NodeDetail() {
               <AreaChart data={latencyData}>
                 <defs>
                   <linearGradient id="latGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(185, 100%, 45%)" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="hsl(185, 100%, 45%)" stopOpacity={0} />
+                    <stop offset="5%" stopColor="hsl(142, 69%, 58%)" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="hsl(142, 69%, 58%)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
-                <XAxis dataKey="time" tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={9} />
-                <YAxis tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="ms" />
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(232, 10%, 24%)" />
+                <XAxis dataKey="time" tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={9} />
+                <YAxis tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="ms" />
                 <Tooltip contentStyle={chartTooltipStyle} />
-                <Area type="monotone" dataKey="latency" stroke="hsl(185, 100%, 45%)" fill="url(#latGrad)" strokeWidth={1.5} />
+                <Area type="monotone" dataKey="latency" stroke="hsl(142, 69%, 58%)" fill="url(#latGrad)" strokeWidth={1.5} />
               </AreaChart>
             </ResponsiveContainer>
           </ChartCard>
