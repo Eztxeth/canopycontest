@@ -49,8 +49,8 @@ const levelIcon = {
 };
 
 const chartTooltipStyle = {
-  backgroundColor: "hsl(220, 18%, 10%)",
-  border: "1px solid hsl(220, 15%, 18%)",
+  backgroundColor: "hsl(232, 12%, 16%)",
+  border: "1px solid hsl(232, 10%, 24%)",
   borderRadius: "8px",
   fontSize: 11,
   fontFamily: "JetBrains Mono",
@@ -154,15 +154,15 @@ export default function NodeDetail() {
               <AreaChart data={latencyData}>
                 <defs>
                   <linearGradient id="latGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(185, 100%, 45%)" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="hsl(185, 100%, 45%)" stopOpacity={0} />
+                    <stop offset="5%" stopColor="hsl(142, 69%, 58%)" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="hsl(142, 69%, 58%)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
-                <XAxis dataKey="time" tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={9} />
-                <YAxis tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="ms" />
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(232, 10%, 24%)" />
+                <XAxis dataKey="time" tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={9} />
+                <YAxis tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="ms" />
                 <Tooltip contentStyle={chartTooltipStyle} />
-                <Area type="monotone" dataKey="latency" stroke="hsl(185, 100%, 45%)" fill="url(#latGrad)" strokeWidth={1.5} />
+                <Area type="monotone" dataKey="latency" stroke="hsl(142, 69%, 58%)" fill="url(#latGrad)" strokeWidth={1.5} />
               </AreaChart>
             </ResponsiveContainer>
           </ChartCard>
@@ -170,11 +170,11 @@ export default function NodeDetail() {
           <ChartCard title="Peer Count (24h)" delay={0.25}>
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={peerData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
-                <XAxis dataKey="time" tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={3} />
-                <YAxis tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(232, 10%, 24%)" />
+                <XAxis dataKey="time" tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={3} />
+                <YAxis tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} />
                 <Tooltip contentStyle={chartTooltipStyle} />
-                <Line type="monotone" dataKey="peers" stroke="hsl(160, 100%, 45%)" strokeWidth={1.5} dot={false} />
+                <Line type="monotone" dataKey="peers" stroke="hsl(142, 69%, 58%)" strokeWidth={1.5} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </ChartCard>
@@ -191,16 +191,16 @@ export default function NodeDetail() {
                     <stop offset="95%" stopColor="hsl(45, 100%, 50%)" stopOpacity={0} />
                   </linearGradient>
                   <linearGradient id="memGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(160, 100%, 45%)" stopOpacity={0.2} />
-                    <stop offset="95%" stopColor="hsl(160, 100%, 45%)" stopOpacity={0} />
+                    <stop offset="5%" stopColor="hsl(142, 69%, 58%)" stopOpacity={0.2} />
+                    <stop offset="95%" stopColor="hsl(142, 69%, 58%)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
-                <XAxis dataKey="time" tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={3} />
-                <YAxis tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="%" />
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(232, 10%, 24%)" />
+                <XAxis dataKey="time" tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} interval={3} />
+                <YAxis tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="%" />
                 <Tooltip contentStyle={chartTooltipStyle} />
                 <Area type="monotone" dataKey="cpu" stroke="hsl(45, 100%, 50%)" fill="url(#cpuGrad)" strokeWidth={1.5} name="CPU" />
-                <Area type="monotone" dataKey="memory" stroke="hsl(160, 100%, 45%)" fill="url(#memGrad)" strokeWidth={1.5} name="Memory" />
+                <Area type="monotone" dataKey="memory" stroke="hsl(142, 69%, 58%)" fill="url(#memGrad)" strokeWidth={1.5} name="Memory" />
               </AreaChart>
             </ResponsiveContainer>
           </ChartCard>
@@ -208,11 +208,11 @@ export default function NodeDetail() {
           <ChartCard title="Block Time (last 30 blocks)" delay={0.35}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={blockTimeData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
-                <XAxis dataKey="block" tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 8 }} tickLine={false} axisLine={false} interval={4} />
-                <YAxis tick={{ fill: "hsl(220, 10%, 50%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="s" />
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(232, 10%, 24%)" />
+                <XAxis dataKey="block" tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 8 }} tickLine={false} axisLine={false} interval={4} />
+                <YAxis tick={{ fill: "hsl(220, 9%, 46%)", fontSize: 9 }} tickLine={false} axisLine={false} unit="s" />
                 <Tooltip contentStyle={chartTooltipStyle} />
-                <Bar dataKey="time" fill="hsl(160, 100%, 45%)" radius={[2, 2, 0, 0]} opacity={0.7} />
+                <Bar dataKey="time" fill="hsl(142, 69%, 58%)" radius={[2, 2, 0, 0]} opacity={0.7} />
               </BarChart>
             </ResponsiveContainer>
           </ChartCard>
