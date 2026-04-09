@@ -38,6 +38,7 @@ export function NodeCard({ id, name, chain, status, blockHeight, peers, uptime, 
       </div>
       </motion.div>
     </Link>
+  );
 }
 
 function Stat({ icon: Icon, label, value, highlight }: { icon: any; label: string; value: string; highlight?: boolean }) {
