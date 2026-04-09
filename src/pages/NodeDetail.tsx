@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Activity, Box, Users, Clock, HardDrive, Cpu, MemoryStick, Globe, Terminal, AlertTriangle, CheckCircle, XCircle, Loader2 } from "lucide-react";
 import { AreaChart, Area, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
 import { getNodeById } from "@/data/nodes";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/canopy-logo.png";
 import { StatusIndicator } from "@/components/StatusIndicator";
 
 const latencyData = Array.from({ length: 60 }, (_, i) => ({
@@ -78,11 +78,11 @@ export default function NodeDetail() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/">
-              <img src={logo} alt="NodeWatch" className="h-8 w-8 rounded-md object-cover" />
+              <img src={logo} alt="Canopy Network" className="h-8 w-8 object-contain" />
             </Link>
             <div>
-              <h1 className="text-lg font-bold text-foreground text-glow">NodeWatch</h1>
-              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Web3 Node Monitor</p>
+              <h1 className="text-lg font-bold text-foreground text-glow">Canopy</h1>
+              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Node Monitor</p>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Activity } from "lucide-react";
 import { NodeCard } from "@/components/NodeCard";
 import { NetworkStats } from "@/components/NetworkStats";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/canopy-logo.png";
 import { RecentBlocks } from "@/components/RecentBlocks";
 import { SyncChart } from "@/components/SyncChart";
 import { nodes } from "@/data/nodes";
@@ -14,16 +14,16 @@ export default function Index() {
       <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="NodeWatch" className="h-8 w-8 rounded-md object-cover" />
+            <img src={logo} alt="Canopy Network" className="h-8 w-8 object-contain" />
             <div>
-              <h1 className="text-lg font-bold text-foreground text-glow">NodeWatch</h1>
-              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Web3 Node Monitor</p>
+              <h1 className="text-lg font-bold text-foreground text-glow">Canopy</h1>
+              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Node Monitor</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-success/10 border border-success/20">
               <Activity className="h-3 w-3 text-success" />
-              <span className="text-xs font-mono text-success">4/6 Nodes Active</span>
+              <span className="text-xs font-mono text-success">4/6 Nodes Online</span>
             </div>
           </div>
         </div>
